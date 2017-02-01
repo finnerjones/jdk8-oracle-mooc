@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * Created by finner on 1/2/17.
  */
@@ -28,5 +30,14 @@ public class Lesson1Test {
         Assert.assertEquals("Expecting list of 1 elements", 1, l1.exercise2().size());
         Assert.assertEquals("1st element is echo", "echo", l1.exercise2().get(0));
     }
+
+    @Test
+    public void exercise3() {
+        Assert.assertEquals("Expecting list of uppercase elements", Arrays.asList("ALPHA", "BRAVO", "CHARLIE", "DELTA", "ECHO", "FOXTROT"), l1.exercise3());
+        Assert.assertEquals("Expecting ALPHA as first element", "ALPHA", l1.exercise3().get(0));
+    }
+
+
+
 }
 

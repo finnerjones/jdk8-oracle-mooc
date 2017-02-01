@@ -74,11 +74,13 @@ public class Lesson1 {
    *
    * Replace every word in the list with its upper case equivalent.
    */
-  private void exercise3() {
+  public List<String> exercise3() {
     List<String> list = new ArrayList<>(Arrays.asList(
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     /* YOUR CODE HERE */
+    list.replaceAll(w -> w.toUpperCase());
+    return list;
   }
 
   /**
