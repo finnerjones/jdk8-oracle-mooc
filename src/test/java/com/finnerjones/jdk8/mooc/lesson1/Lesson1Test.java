@@ -37,7 +37,10 @@ public class Lesson1Test {
         Assert.assertEquals("Expecting ALPHA as first element", "ALPHA", l1.exercise3().get(0));
     }
 
-
+    @Test
+    public void exercise4() {
+        Assert.assertEquals("Expecting the string a1b2c3", "a1b2c3", l1.exercise4());
+    }
 
 }
 

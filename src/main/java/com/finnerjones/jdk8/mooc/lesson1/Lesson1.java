@@ -51,7 +51,6 @@ public class Lesson1 {
     /* YOUR CODE HERE */
     StringBuilder sb = new StringBuilder();
     list.forEach(w -> sb.append(w.substring(0,1)));
-    System.out.println(sb);
     return sb.toString();
   }
 
@@ -89,13 +88,16 @@ public class Lesson1 {
    * Convert every key-value pair of the map into a string and append them all
    * into a single string, in iteration order.
    */
-  private void exercise4() {
+  public String exercise4() {
     Map<String, Integer> map = new TreeMap<>();
     map.put("c", 3);
     map.put("b", 2);
     map.put("a", 1);
 
     /* YOUR CODE HERE */
+    StringBuilder sb = new StringBuilder();
+    map.forEach((k,v) -> sb.append(k).append(v));
+    return sb.toString();
   }
 
   /**
@@ -103,10 +105,11 @@ public class Lesson1 {
    *
    * Create a new thread that prints the numbers from the list.
    */
-  private void exercise5() {
+  public void exercise5() {
     List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
     /* YOUR CODE HERE */
+    new Thread(() -> list.forEach(i -> System.out.println(i))).start();
   }
 
   /**
